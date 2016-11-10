@@ -1,0 +1,14 @@
+===========================================
+IF & LIST EXAMPLE:
+{% if list_test %}
+LIST OK:
+{% loop list_test %}
+    -- "{% name %}"
+    {% if name == #1113 %} SPECIAL NAME [{% name %}]!!!!
+    {% endif %}
+{% endloop %}
+{% else %}
+NO LIST
+{% endif %}
+===========================================
+

@@ -1,0 +1,10 @@
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+<hr>
+{% loop list_test %}
+    {% ifchange name %} NAME {% name %} updated     {% else %} NAME {% name %} not changed {% endif %}
+    {% iftest external_test_method_001 name value %} +++ {% endif %}
+    {% format formatter_001 %} {% name %} {% endformat %}
+
+{% endloop %}
+
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz

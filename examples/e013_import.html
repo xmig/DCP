@@ -1,0 +1,14 @@
+{% loop list_test %}
+    {% name %}
+
+    {% if inner %}
+    {% loop inner %}
+        {% import value as V %}
+        {% VVX %} (imported: {% V %})
+        {% if V == #114 %} YES {% endif %}
+    {% endloop %}
+
+    {% endif %}
+{% endloop %}
+
+

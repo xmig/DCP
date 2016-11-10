@@ -1,0 +1,35 @@
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+REFORMABLE TEST: {% mode %}
+<hr>
+{% loop PERFORM.LIST %}
+    <p>{% RID %} [{% ODD %}] NAME: {% NAME %}
+    {% if NAME == #line000001 %}
+        SPECIAL NAME [{% NAME %}]!!!!{% endif %}
+    {% if SUB %}
+       <hr>
+        {% loop SUB %}
+            <br> {% XXX %} = {% value %}
+        {% endloop %}
+    {% endif %}
+    {% if DOT %}
+        {% loop DOT %}
+            <br> DOT: [{% DA.DB.DC.DD %}]
+        {% ifrecord second %}
+         SECOND RECORD!!!
+        {% endif %}
+         {% ifrecord inner %}
+         record is inner
+        {% endif %}
+        {% endloop %}
+    {% endif %}
+    {% ifrecord last %}
+        LAST RECORD!!!
+    {% endif %}
+    {% ifrecord odd %}
+        -------------------
+    {% else %}
+        ===================
+    {% endif %}
+{% endloop %}
+<hr>
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz

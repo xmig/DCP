@@ -1,0 +1,14 @@
+IF & LIST EXAMPLE - VALUE REF:
+{% if list_test %}
+LIST OK:
+{% loop list_test %}
+    -- "{% name %}"
+    {% if bobick == name %}
+        SPECIAL VALUE [{% name %}] [{% bobick %}]!!!!
+    {% endif %}
+{% endloop %}
+{% else %}
+NO LIST
+{% endif %}
+===========================================
+if (_gval('name', $rdx, @rdx) eq $rdx->{'bobick'} )

@@ -1,0 +1,9 @@
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+<hr>
+{% loop list_test %}
+    {% ifchange name %} NAME {% name %} updated     {% else %} NAME {% name %} not changed {% endif %}
+    {% ifempty value %} VALUE [{% value %}] EMPTY {% else %} VALUE [{% value %}] SET UP {% endif %}
+
+{% endloop %}
+<hr>
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz

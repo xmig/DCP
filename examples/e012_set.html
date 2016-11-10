@@ -1,0 +1,15 @@
+===========================================
+{% loop list_test %}
+    -- "{% name %}"
+    {% if name == #1113 %} SPECIAL NAME [{% name %}]!!!!
+    {% endif %}
+{% endloop %}
+{% set AAA=#test %}
+{% set BBB=bobick %}
+AAA: [{% AAA %}]
+{% loop BBB %}
+ *** {%_%} ***
+{% endloop %}
+
+===========================================
+
